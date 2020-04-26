@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/update/<%= val.id %>?_method=put" method="POST">
+    <% digimons.forEach(val=>{ %>
+
+        <input type="text" value="<%= val.name %>">
+        <input type="text" value="<%= val.img %>">
+        <input type="text" value="<%= val.level %>">
+        <% }) %>
+
+    </form>
+
+        <form id="<%=val.id%>" action="/delete/<%= val.id %>?_method=delete" method="POST">
+        <button > show-details"</button>
+    </form>
+
+
+
+</body>
+</html>
